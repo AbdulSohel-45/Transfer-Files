@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<%  
+	out.println(fullName);
+	out.println(number);
+	out.println(source);
+	out.println(destination);
+	out.println(vehicle);
+	out.println(amount);
+	out.println("<HTML>"
+			+ "FullName : " + fullName +"<BR>"
+			+ "Mobile : " + number +"<BR>"
+			+ "Source : " + source +"<BR>"
+			+ "Destination : " + destination +"<BR>"
+			+ "Vehicle : " + vehicle +"<BR>"
+			+ "The total Amount is : " + amount +"<BR>"
+			+ "</HTML>");
+	out.println("Thank you for using Our Service");
+	%>
+</body>
+</html>

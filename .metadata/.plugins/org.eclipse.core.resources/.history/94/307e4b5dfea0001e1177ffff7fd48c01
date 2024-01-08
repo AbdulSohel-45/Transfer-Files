@@ -1,0 +1,31 @@
+package com.Tech.pro;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DBDemo
+{
+	public static int getDB(String firstName,int number,String source,String destination,String vehicle,int distance,int price ) throws ClassNotFoundException, SQLException
+	{
+		String url="jdbc:mysql://localhost:3306/offo";
+		String user="root";
+		String pwd="root";
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con=DriverManager.getConnection(url,user,pwd);
+		PreparedStatement pst=con.prepareStatement("insert into app values(?,?,?,?,?,?,?");
+		pst.setString(1, firstName);
+		pst.setInt(2, number);
+		pst.setString(3, source);
+		pst.setString(4, destination);
+		pst.setString(5, vehicle);
+		pst.setInt(6, distance);
+		pst.setInt(7, price);
+		
+		int rs=pst.executeUpdate();
+//		pst.close();
+		System.out.println("Thank you for submitting");
+		return rs;
+	}
+}
